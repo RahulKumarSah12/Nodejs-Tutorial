@@ -1,5 +1,10 @@
-function add(a,b){
-    return a+b;
+function solve(num){
+    if(num%2==0){
+        return "Even";
+    }
+    else{
+        return "Odd";
+    }
 }
 
-module.exports = add;
+module.exports = solve;      // Single Function export

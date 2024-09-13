@@ -4,7 +4,8 @@
   "description": "Documenting Nodejs Tutorial",
   "main": "hello.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node 3math2.js"
   },
   "author": "Rahul",
   "license": "ISC"
