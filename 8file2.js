@@ -13,10 +13,14 @@ const fs = require("fs");
 // --------------------------------------------
 
 
-console.log("Rahul2");
+// console.log("Rahul2");
 
-fs.readFile("./myfile/2test.txt", "utf-8", (err,res)=>{         // ASync -> Non-Blocking
-    console.log(res);
-});     
+// fs.readFile("./myfile/2test.txt", "utf-8", (err,res)=>{         // ASync -> Non-Blocking
+//     console.log(res);
+// });     
 
-console.log("Rohit2");
+// console.log("Rohit2");
+
+
+const os = require("os");
+console.log(os.cpus().length);
