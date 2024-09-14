@@ -8,5 +8,8 @@
     "start": "node 3math2.js"
   },
   "author": "Rahul",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }
