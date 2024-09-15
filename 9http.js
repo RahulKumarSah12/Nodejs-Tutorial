@@ -1,15 +1,16 @@
 const http = require("http");
-const fs = require("fs");
+
+console.log(http);
+console.log(http.STATUS_CODES);
+console.log(http.METHODS);
 
 const myServer = http.createServer((req,res)=>{
-    fs.appendFile("./myfile/1test.txt",`${req.url} : Great Work\n`,(err)=>{
-        console.log("Error", err);
-    })
-    res.end("Done");
+    console.log("Rahul");
+    console.log(req.headers);
+    // console.log(req);
+    res.end("Hello From Server");
 })
 
-console.log("Rohit");
-
-myServer.listen(9000, () => {console.log("Server Started")});
-
-console.log("Rahul");
+myServer.listen(9000, ()=>{
+    console.log("Done");
+})
