@@ -115,6 +115,26 @@ app.delete("/delete_student/:id", (req,res)=>{
         })
 });
 
+app.patch("/edit_student/:id", (req,res)=>{
+    const student_id = req.params.id;
+    const updatedStudent = req.body;
+    console.log(updatedStudent);
+    Students.findByIdAndUpdate(student_id, updatedStudent, {new:true})
+        .then((result)=>{
+            if(result==null){
+                console.log("There is no such student with this id");
+                res.send("There is no such student with this id");
+            }
+            else{
+                console.log("Result",result);
+                res.send(result);
+            }
+        })
+        .catch((err)=>{
+            console.log("Error",err);
+        })
+});
+
 app.listen(4500,()=>{
     console.log("Server Started");
 })
